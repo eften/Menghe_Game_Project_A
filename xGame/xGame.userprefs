@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Utility/VariableDecorator/TVariableModifier.cs">
+    <Files>
+      <File FileName="Assets/Script/Utility/VariableDecorator/TVariableModifier.cs" Line="13" Column="28" />
+      <File FileName="Assets/Script/Model/Item/BaseResGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Model/Item/BaseItem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Model/Item/BaseResItem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Controller/Item/MonoResGenController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/Viewer/Item/MonoResGenViewer.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
