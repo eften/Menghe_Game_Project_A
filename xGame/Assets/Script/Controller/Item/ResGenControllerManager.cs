@@ -43,13 +43,15 @@ public class ResGenControllerManager : TSingleton<ResGenControllerManager> , IDi
         return mgr;
     }
 
-    //public double Generate(float fElapseTime)
-    //{
-    //    foreach (var item in m_dicControllers)
-    //    {
-    //        item.Value.Generate(fElapseTime);
-    //    }
-    //}
+    public void Update(float fElapseTime)
+	{
+		foreach (var item in m_dicControllers) 
+		{
+			item.Value.Update(fElapseTime);
+		}
+	}
+
+
 
     #endregion
 

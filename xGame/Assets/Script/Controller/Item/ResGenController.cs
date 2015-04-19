@@ -87,6 +87,16 @@ public class SingleRssGenControllerMgr : IDisposable
         m_context = context;
     }
 
+	public double TotalGen
+	{
+		get { return m_totalGen.Value;}
+	}
+
+	public double CurrentGen
+	{
+		get { return m_CurGen.Value;}
+	}
+
     public void Dispose()
     {
         //throw new NotImplementedException();
@@ -99,6 +109,8 @@ public class SingleRssGenControllerMgr : IDisposable
         m_context = null;
 
         m_iGenCount.Dispose();
+		m_totalGen.Dispose ();
+		m_CurGen.Dispose ();
     }
 
 
@@ -112,7 +124,33 @@ public class SingleRssGenControllerMgr : IDisposable
         m_iGenCount.RemoveVarChangeCallback(callback);
     }
 
+	public void AddTotalGenChangedListener(TNotifyVariable<double>.VarChangeNotify callback)
+	{
+		m_totalGen.AddVarChangeCallback (callback);
+	}
 
+	public void RemvoeTotalGenChangedListner(TNotifyVariable<double>.VarChangeNotify callback)
+	{
+		m_totalGen.RemoveVarChangeCallback (callback);
+	}
+
+	public void AddCurGenChangedListener(TNotifyVariable<double>.VarChangeNotify callback)
+	{
+		m_CurGen.AddVarChangeCallback(callback);
+	}
+	
+	public void RemvoeCurGenChangedListner(TNotifyVariable<double>.VarChangeNotify callback)
+	{
+		m_CurGen.RemoveVarChangeCallback(callback);
+	}
+
+	public double CollectCurrent()
+	{
+		double fValue = m_CurGen.Value;
+		m_CurGen.Value = 0;
+
+		return fValue;
+	}
 
     public void AddContronller()
     {
@@ -124,7 +162,17 @@ public class SingleRssGenControllerMgr : IDisposable
         m_iGenCount.Value = m_listControllers.Count;
     }
 
-    public double Generate(float fElapseTime)
+	public double Update(float fElapseTime)
+	{
+		m_fTempValue += _Generate (fElapseTime);
+		m_totalGen.Value += m_fTempValue;
+		m_CurGen.Value += m_fTempValue;
+
+		return m_fTempValue;
+	}
+
+	#region Protected Functions
+    protected double _Generate(float fElapseTime)
     {
         double fGen = 0.0f;
         for (int iIndex = 0; iIndex < m_listControllers.Count; iIndex++)
@@ -134,7 +182,7 @@ public class SingleRssGenControllerMgr : IDisposable
 
         return fGen;
     }
-
+	#endregion
 
     #region Members
 
@@ -144,6 +192,12 @@ public class SingleRssGenControllerMgr : IDisposable
 
     private TNotifyVariable<int> m_iGenCount = new TNotifyVariable<int>(0);
 
+	private TNotifyVariable<double> m_totalGen = new TNotifyVariable<double> (0.0f);
+
+	private TNotifyVariable<double> m_CurGen = new TNotifyVariable<double> (0.0f);
+	
+
+	private double m_fTempValue = 0.0f;
     //private int 
 
     #endregion
