@@ -1,0 +1,69 @@
+﻿{
+ "Datas":
+	[  
+	  {
+	    "GeneratorID": "1000",
+	    "Name": "hobo",
+	    "Icon": "Texture/Icon/pizza",
+	    "Des": "无业游民",
+	    "ConsumablesID": "101",
+	    "ConsumablesCount1": "1",
+	    "ConsumablesID2": "0",
+	    "ConsumablesCount2": "0",
+	    "GeneratResID1": "0",
+	    "GeneratResCount1": "0",
+	    "Probability1": "0",
+	    "GeneratResID2": "0",
+	    "GeneratResCount2": "0",
+	    "Probability2": "0"
+	  },
+	  {
+	    "GeneratorID": "1001",
+	    "Name": "hunter",
+	    "Icon": "Texture/Icon/pizza",
+	    "Des": "猎人，产出肉和毛皮",
+	    "ConsumablesID": "101",
+	    "ConsumablesCount1": "1",
+	    "ConsumablesID2": "0",
+	    "ConsumablesCount2": "0",
+	    "GeneratResID1": "101",
+	    "GeneratResCount1": "1.3",
+	    "Probability1": "1",
+	    "GeneratResID2": "104",
+	    "GeneratResCount2": "1",
+	    "Probability2": "0.2"
+	  },
+	  {
+	    "GeneratorID": "1002",
+	    "Name": "timberjack",
+	    "Icon": "Texture/Icon/pizza",
+	    "Des": "伐木工",
+	    "ConsumablesID": "101",
+	    "ConsumablesCount1": "1",
+	    "ConsumablesID2": "0",
+	    "ConsumablesCount2": "0",
+	    "GeneratResID1": "102",
+	    "GeneratResCount1": "1",
+	    "Probability1": "1",
+	    "GeneratResID2": "106",
+	    "GeneratResCount2": "1",
+	    "Probability2": "0.3"
+	  },
+	  {
+	    "GeneratorID": "1003",
+	    "Name": "miner",
+	    "Icon": "Texture/Icon/pizza",
+	    "Des": "矿工",
+	    "ConsumablesID": "101",
+	    "ConsumablesCount1": "1",
+	    "ConsumablesID2": "0",
+	    "ConsumablesCount2": "0",
+	    "GeneratResID1": "103",
+	    "GeneratResCount1": "1",
+	    "Probability1": "1",
+	    "GeneratResID2": "105",
+	    "GeneratResCount2": "1",
+	    "Probability2": "0.3"
+	  }
+	]
+}

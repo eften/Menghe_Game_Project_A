@@ -39,19 +39,24 @@ namespace Common
 		
 		public TBaseItemJsonDB(string key, string dataContent)
 		{
-			m_listDatas = Json.Deserialize (dataContent) as TBaseItemList<T> ;
+			m_listDatas = NJson.Decode<TBaseItemList<T>> (dataContent);
 			if (null == m_listDatas) 
 			{
 				m_listDatas = new TBaseItemList<T>();
 				return;
 			}
-			m_strMainKey = key;
+
+			/*for (int iIndex = 0; iIndex < m_listDatas.Datas.Count; iIndex++) 
+			{
+				UnityEngine.Debug.Log(m_listDatas.Datas[iIndex]);
+			}
+			*/
+			
 			Type t = typeof(T);
 			FieldInfo[] fields = t.GetFields();
 			foreach (FieldInfo field in fields) 
 			{
 				FieldInfo info = t.GetField (field.Name, BindingFlags.Public | BindingFlags.Instance);
-				
 				if(field.Name == key)
 				{
 					for (int iIndex = 0; iIndex < m_listDatas.Datas.Count; iIndex++) 
@@ -69,7 +74,8 @@ namespace Common
 				
 			}
 		}
-		
+
+
 		public T GetByKey(string key)
 		{
 			return this [key];
