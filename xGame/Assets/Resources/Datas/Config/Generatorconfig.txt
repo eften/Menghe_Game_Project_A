@@ -64,6 +64,54 @@
 	    "GeneratResID2": "105",
 	    "GeneratResCount2": "1",
 	    "Probability2": "0.3"
+	  },
+	  {
+	    "GeneratorID": "1004",
+	    "Name": "click_meet",
+	    "Icon": "Texture/Icon/pizza",
+	    "Des": "apple",
+	    "ConsumablesID": "0",
+	    "ConsumablesCount1": "0",
+	    "ConsumablesID2": "0",
+	    "ConsumablesCount2": "0",
+	    "GeneratResID1": "101",
+	    "GeneratResCount1": "1",
+	    "Probability1": "1",
+	    "GeneratResID2": "104",
+	    "GeneratResCount2": "1",
+	    "Probability2": "0.2"
+	  },
+	  {
+	    "GeneratorID": "1005",
+	    "Name": "click_wood",
+	    "Icon": "Texture/Icon/pizza",
+	    "Des": "apple",
+	    "ConsumablesID": "0",
+	    "ConsumablesCount1": "0",
+	    "ConsumablesID2": "0",
+	    "ConsumablesCount2": "0",
+	    "GeneratResID1": "102",
+	    "GeneratResCount1": "1",
+	    "Probability1": "1",
+	    "GeneratResID2": "106",
+	    "GeneratResCount2": "1",
+	    "Probability2": "0.2"
+	  },
+	  {
+	    "GeneratorID": "1006",
+	    "Name": "click_store",
+	    "Icon": "Texture/Icon/pizza",
+	    "Des": "apple",
+	    "ConsumablesID": "0",
+	    "ConsumablesCount1": "0",
+	    "ConsumablesID2": "0",
+	    "ConsumablesCount2": "0",
+	    "GeneratResID1": "103",
+	    "GeneratResCount1": "1",
+	    "Probability1": "1",
+	    "GeneratResID2": "105",
+	    "GeneratResCount2": "1",
+	    "Probability2": "0.2"
 	  }
 	]
 }

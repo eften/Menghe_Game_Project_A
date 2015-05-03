@@ -75,10 +75,14 @@ namespace com.CommonUtility.CommonData
             {
                 m_callback = callback;
 
+				callback.Invoke(m_iCurrent, m_iLast);
+
                 return;
             }
 
             m_callback += callback;
+			callback.Invoke(m_iCurrent, m_iLast);
+			
         }
 
         /// <summary>

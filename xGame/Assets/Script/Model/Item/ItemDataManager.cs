@@ -31,6 +31,16 @@ namespace Common.Model.Item
 			_Init ();
 		}
 
+		public ResourceItem GetResourceItem(int ID)
+		{
+			return m_ResItemList.GetByKey (ID.ToString ());		
+		}
+
+		public GeneratorItem GetGeneratorItem(int ID)
+		{
+			return m_GenItemList.GetByKey (ID.ToString ());		
+		}
+
 		#endregion
 
 		#region Private Functions
